@@ -176,8 +176,8 @@ const Navbar = () => {
             
             {/* Logo & Brand */}
             <Link to="/" className="flex items-center space-x-3 group">
-              <div className="w-10 h-10 rounded-xl bg-blue-600 p-0.5 shadow-md shadow-blue-600/20 group-hover:scale-105 transition-transform duration-200 flex items-center justify-center text-white">
-                <Compass className="w-5 h-5 group-hover:rotate-45 transition-transform duration-300" />
+              <div className="w-10 h-10 rounded-xl bg-blue-600 p-0.5 shadow-md shadow-blue-600/20 group-hover:scale-105 transition-transform duration-200 flex items-center justify-center text-white overflow-hidden">
+                <img src="/favicon.png" alt="Lost & Found Platform Logo" className="w-full h-full object-cover rounded-lg" />
               </div>
               <div className="flex flex-col">
                 <span className="font-display font-extrabold text-xl tracking-tight text-slate-900 dark:text-white">
