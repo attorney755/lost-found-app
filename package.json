@@ -1,0 +1,14 @@
+{
+  "name": "lost-found-app-root",
+  "version": "1.0.0",
+  "description": "Lost & Found Finder Platform Root Aggregator",
+  "main": "server/src/server.js",
+  "scripts": {
+    "install-server": "cd server && npm install",
+    "install-client": "cd client && npm install",
+    "postinstall": "cd server && npm install",
+    "start": "cd server && node src/server.js"
+  },
+  "author": "Attorney Valois NIYIGABA",
+  "license": "MIT"
+}
