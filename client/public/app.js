@@ -119,10 +119,8 @@
   var __forAwait = (obj, it, method) => (it = obj[__knownSymbol("asyncIterator")]) ? it.call(obj) : (obj = obj[__knownSymbol("iterator")](), it = {}, method = (key, fn) => (fn = obj[key]) && (it[key] = (arg) => new Promise((yes, no, done) => (arg = fn.call(obj, arg), done = arg.done, Promise.resolve(arg.value).then((value) => yes({ value, done }), no)))), method("next"), method("return"), it);
 
   // <define:process.env>
-  var define_process_env_default;
   var init_define_process_env = __esm({
     "<define:process.env>"() {
-      define_process_env_default = { NODE_ENV: "development" };
     }
   });
 
@@ -29421,8 +29419,9 @@
   } = axios_default;
 
   // client/src/services/api.js
+  var isLocalhost = typeof window !== "undefined" && (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1");
   var API = axios_default.create({
-    baseURL: define_process_env_default.REACT_APP_API_URL || "http://localhost:5000/api",
+    baseURL: isLocalhost ? "/api" : "https://lost-found-app-1s9n.onrender.com/api",
     headers: {
       "Content-Type": "application/json"
     }

@@ -1,7 +1,12 @@
 import axios from 'axios';
 
+// Automatically detect hostname: Use local proxy for localhost, live Render backend for production
+const isLocalhost = typeof window !== 'undefined' && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1');
+
 const API = axios.create({
-  baseURL: process.env.REACT_APP_API_URL || 'http://localhost:5000/api',
+  baseURL: isLocalhost 
+    ? '/api' 
+    : 'https://lost-found-app-1s9n.onrender.com/api',
   headers: {
     'Content-Type': 'application/json',
   },
