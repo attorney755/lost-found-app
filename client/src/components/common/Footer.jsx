@@ -188,7 +188,7 @@ const Footer = () => {
             <span className="hidden sm:inline text-slate-700">•</span>
             <p className="text-slate-300 font-medium flex items-center space-x-1">
               <span>Developed with</span>
-              <Heart className="w-3.5 h-3.5 text-rose-500 inline fill-rose-500 mx-0.5 animate-pulse" />
+              
               <span>by</span>
               <strong className="text-white font-bold tracking-wide pl-1">Attorney Valois NIYIGABA</strong>
             </p>
